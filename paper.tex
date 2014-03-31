@@ -229,7 +229,7 @@ hands-on fashion by adjusting parameters and modifying code. In addition, a
 \texttt{novice} module is provided, not only for teaching programming in the
 \textquotedbl{}turtle graphics\textquotedbl{} paradigm, but also to familiarize users with image
 concepts such as color and dimensionality. Furthermore, the project
-takes part in the yearly Google Summer of Code \cite{gsoc} program, where
+takes part in the yearly Google Summer of Code \citep{gsoc} program, where
 students learn about image processing and software engineering through
 contributing to the project.
 \item 
@@ -321,7 +321,7 @@ local maxima in an image.\begin{Verbatim}[commandchars=\\\{\},fontsize=\footnote
 \PY{n}{ax3}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Peak local maxima}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{24}\PY{p}{)}
 \PY{n}{ax3}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{off}\PY{l+s}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
-Next, a Canny filter (\texttt{filter.canny}) \cite{Canny} detects the edge of each coin.\begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+Next, a Canny filter (\texttt{filter.canny}) \citep{Canny} detects the edge of each coin.\begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
 \PY{c}{\PYZsh{} Detect edges.}
 \PY{k+kn}{from} \PY{n+nn}{skimage} \PY{k+kn}{import} \PY{n+nb}{filter}
 
@@ -369,12 +369,12 @@ processing tasks with only a few function calls.
   \label{library-contents}
 
 The scikit-image project started in August of 2009 and has received
-contributions from more than 100 individuals \cite{ohloh}.  The package can be
+contributions from more than 100 individuals \citep{ohloh}.  The package can be
 installed from, amongst other sources, the Python Package Index, Continuum
-Anaconda \cite{anaconda}, Enthought Canopy \cite{canopy}, Python(x,y) \cite{pythonxy},
-NeuroDebian \cite{neurodebian} and GNU/Linux distributions such as Ubuntu \cite{ubuntu}.
+Anaconda \citep{anaconda}, Enthought Canopy \citep{canopy}, Python(x,y) \citep{pythonxy},
+NeuroDebian \citep{neurodebian} and GNU/Linux distributions such as Ubuntu \citep{ubuntu}.
 In March 2014 alone, the package was downloaded more than 5000 times from the
-Python Package Index \cite{pypi}.
+Python Package Index \citep{pypi}.
 
 The package currently contains the following sub-modules:%
 \begin{itemize}
@@ -430,7 +430,7 @@ viewer: A simple graphical user interface for visualizing results and exploring 
 \section*{Data format and pipelining}
   \label{data-format-and-pipelining}
 
-scikit-image represents images as NumPy arrays \cite{numpy}, the de facto standard
+scikit-image represents images as NumPy arrays \citep{numpy}, the de facto standard
 for storage of multi-dimensional data in scientific Python. Each array has a
 dimensionality, such as 2 for a 2-D grayscale image, 3 for a 2-D multi-
 channel image, or 4 for a 3-D multi-channel image; a shape, such as \$(M, N, 3)\$
@@ -439,7 +439,7 @@ numeric data type, such as \texttt{float} for continuous-valued pixels and \text
 for 8-bit pixels. Our use of NumPy arrays as the fundamental data structure
 maximizes compatibility with the rest of the scientific Python ecosystem.
 Data can be passed as-is to other tools such as NumPy, SciPy, matplotlib,
-scikit-learn \cite{scikit-learn}, Mahotas {[}Mahotas{]}, OpenCV, and more.
+scikit-learn \citep{scikit-learn}, Mahotas \citep{Mahotas}, OpenCV, and more.
 
 Images of differing data-types can complicate the construction of pipelines.
 scikit-image follows an \textquotedbl{}Anything In, Anything Out\textquotedbl{} approach, whereby all
@@ -461,19 +461,19 @@ community.
 
 The library is licensed under the \emph{Modified BSD license}, which allows
 unrestricted redistribution for any purpose as long as copyright notices
-and disclaimers of warranty are maintained \cite{BSD}. It is compatible with GPL
+and disclaimers of warranty are maintained \citep{BSD}. It is compatible with GPL
 licenses, so users of scikit-image can choose to make their code available
 under the GPL. However, unlike the GPL, it does not require users to
 open-source derivative work (BSD is not a so-called copyleft license). Thus,
 scikit-image can also be used in closed-source, commercial environments.
 
 The development team of scikit-image is an open community that collaborates on
-the \emph{GitHub} \cite{GitHub} platform for issue tracking, code review, and release
-management. \emph{Google Groups} \cite{GoogleGroups} is used as a public discussion
+the \emph{GitHub} \citep{GitHub} platform for issue tracking, code review, and release
+management. \emph{Google Groups} \citep{GoogleGroups} is used as a public discussion
 forum for user support, community development, and announcements.
 
-scikit-image complies with the PEP8 coding style standard \cite{PEP8} and the NumPy
-documentation format \cite{NumpyDoc} in order to provide a consistent, familiar user
+scikit-image complies with the PEP8 coding style standard \citep{PEP8} and the NumPy
+documentation format \citep{NumpyDoc} in order to provide a consistent, familiar user
 experience across the library similar to other scientific Python packages. As
 mentioned earlier, the data representation used is \emph{n}-dimensional
 NumPy arrays, which guarantees universal interoperability
@@ -487,12 +487,12 @@ We ensure high code quality by a thorough review process using the pull request
 interface on GitHub. The source code is mainly written in Python, although
 certain performance critical sections are implemented in Cython, an
 optimising static compiler for Python
-\cite{Cython}.  scikit-image aims to achieve full unit test coverage, which is above
+\citep{Cython}.  scikit-image aims to achieve full unit test coverage, which is above
 85\% as of release 0.10 and continues to rise. A continuous integration system
-(\cite{TravisCI}, \cite{Coveralls}) automatically checks each commit for unit test
+\citep{TravisCI,Coveralls} automatically checks each commit for unit test
 coverage and failures on both Python 2 and Python 3. Additionally, the code is
-analyzed by flake8 \cite{flake8} to ensure compliance with the PEP8 coding style
-standards \cite{PEP8}. Finally, the properties of each public function are
+analyzed by flake8 \citep{flake8} to ensure compliance with the PEP8 coding style
+standards \citep{PEP8}. Finally, the properties of each public function are
 documented thoroughly in an API reference guide, embedded as Python
 docstrings and accessible through the official project homepage or an
 interactive
@@ -500,11 +500,11 @@ Python console. Short usage examples are
 typically included inside the docstrings, and new features are accompanied by longer,
 self-contained example scripts added to the narrative documentation and
 compiled to a gallery on the project website. We use Sphinx
-\cite{Sphinx} to automatically generate both library documentation and the website.
+\citep{Sphinx} to automatically generate both library documentation and the website.
 
 The development master branch is fully functional at all times and can be
-obtained from GitHub \cite{SourceCode}. The community releases major updates as
-stable versions approximately every six months \cite{Versioning}. Major releases
+obtained from GitHub \citep{SourceCode}. The community releases major updates as
+stable versions approximately every six months \citep{Versioning}. Major releases
 include new features, while minor releases typically contain only bug fixes.
 Users are notified about API-breaking changes by deprecation warnings one full
 major release before they are applied.
@@ -518,14 +518,14 @@ major release before they are applied.
 Often, a disproportionately large component of research involves dealing with
 various image data-types, color representations, and file format
 conversion. scikit-image offers robust tools for converting between image
-data-types (\cite{DirectX}, \cite{OpenGL}, \cite{GraphicsGemsI}) and to do file input/output
+data-types \citep{DirectX,OpenGL,GraphicsGemsI} and to do file input/output
 (I/O) operations.  Our purpose is to allow investigators to focus their time on
 research, instead of expending effort on mundane low-level tasks.
 
 The package includes a number of algorithms with broad applications across
 image processing research, from computer vision to medical image analysis. We
 refer the reader to the current API documentation for a full listing of current
-capabilities \cite{APIdocs}. In this section we illustrate two real-world usage
+capabilities \citep{APIdocs}. In this section we illustrate two real-world usage
 examples of scikit-image in scientific research.
 
 First, we consider the analysis of a large stack of images, each representing
@@ -554,7 +554,7 @@ cracks and their time of appearance. \DUrole{label}{cracks}}
 Next, in regenerative medicine research, scikit-image is used to monitor the
 regeneration of spinal cord cells in zebrafish embryos (Figure \DUrole{ref}{profile}).
 This process has important implications for the treatment of spinal cord
-injuries in humans (\cite{Bhatt04,Thuret06}).
+injuries in humans \citep{Bhatt04,Thuret06}.
 
 To understand how spinal cords regenerate in these animals, injured cords are
 subjected to different treatments. Neuronal precursor cells (labeled green in Figure \DUrole{ref}{profile}, left panel) are
@@ -596,14 +596,14 @@ Demonstrating the utility and ease-of-use of scikit-image, thirteen-year-old
 Rishab Gargeya of the Harker School won the Synopsys Silicon
 Valley Science and Technology Championship using scikit-image in
 his project, \textquotedbl{}A software based approach for automated pathology diagnosis of
-diabetic retinopathy in the human retina\textquotedbl{} \cite{sciencefair}.
+diabetic retinopathy in the human retina \citep{sciencefair}.
 
 We have also delivered
 image processing tutorials using scikit-image at various
-annual scientific Python conferences, such as EuroSciPy \cite{euroscipy2013}, PyData
-2012 \cite{pydata2012} and SciPy India
+annual scientific Python conferences, such as EuroSciPy \citep{euroscipy2013}, PyData
+2012 \citep{pydata2012} and SciPy India
 2012). Course materials for some of these sessions are found in
-\cite{scipylecturenotes} and are licensed under the permissive \cite{cc-by}
+\citep{scipylecturenotes} and are licensed under the permissive \citep{cc-by}
 license.  These typically include an introduction to the package and provide
 intuitive, hands-on introductions to image processing concepts. The well
 documented application programming interface (API) along with tools that
@@ -626,7 +626,7 @@ Due to the breadth and maturity of its code base, as well as the its
 commercial-friendly license, scikit-image is well suited for
 industrial applications.
 
-BT Imaging \cite{BTImaging} designs and builds tools that use photoluminescence (PL)
+BT Imaging \citep{BTImaging} designs and builds tools that use photoluminescence (PL)
 imaging for photovoltaic applications. PL imaging can characterize
 the quality of multicrystalline silicon wafers by illuminating defects
 that are not visible under standard viewing conditions. The left panel of Figure \DUrole{ref}{PL} shows an optical image of a
@@ -653,7 +653,7 @@ are colored blue, while red indicates the presence of impurities.
 
 scikit-image is also applied in a commercial setting for biometric security applications.
 AICBT Ltd uses multispectral imaging to detect when a person
-attempts to conceal their identity using a facial mask \cite{AICBT}.
+attempts to conceal their identity using a facial mask \citep{AICBT}.
 scikit-image performs file I/O (\texttt{io.imread}), histogram equalization
 (\texttt{exposure.equalize\_hist}), and aligns a visible wavelength image with
 a thermal image (\texttt{transform.AffineTransform}). The system determines
@@ -695,7 +695,7 @@ downscaled to 25\% of their original size.\begin{Verbatim}[commandchars=\\\{\},f
 \subsection*{1. Feature detection and matching}
   \label{feature-detection-and-matching}
 
-\textquotedbl{}Oriented FAST and rotated BRIEF\textquotedbl{} (ORB) features \cite{ORB} are detected in both
+\textquotedbl{}Oriented FAST and rotated BRIEF\textquotedbl{} (ORB) features \citep{ORB} are detected in both
 images.  Each feature yields a binary descriptor; those are used to find the
 putative matches shown in Figure~\DUrole{ref}{pano} B.\begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
 \PY{k+kn}{from} \PY{n+nn}{skimage.feature} \PY{k+kn}{import} \PY{n}{ORB}\PY{p}{,} \PY{n}{match\PYZus{}descriptors}
@@ -719,7 +719,7 @@ putative matches shown in Figure~\DUrole{ref}{pano} B.\begin{Verbatim}[commandch
 \subsection*{2. Transform estimation}
   \label{transform-estimation}
 
-To filter the matches, we apply RANdom SAmple Consensus (RANSAC) \cite{ransac}, a
+To filter the matches, we apply RANdom SAmple Consensus (RANSAC) \citep{ransac}, a
 common method for outlier rejection. This iterative process estimates
 transformation models based on randomly chosen subsets of matches, finally
 selecting the model which corresponds best with the majority of matches.  The
@@ -819,8 +819,8 @@ well matched.
   \label{blending}
 
 To blend images smoothly we make use of the open source package Enblend
-\cite{Enblend}, which in turn employs multi-resolution splines and Laplacian
-pyramids \cite{burt_adelson_0}, \cite{burt_adelson_1}.  The final panorama is shown in
+\citep{Enblend}, which in turn employs multi-resolution splines and Laplacian
+pyramids \citep{burt_adelson_0,burt_adelson_1}.  The final panorama is shown in
 Figure~\DUrole{ref}{pano} E.\begin{figure*}[bht]\noindent\makebox[\textwidth][c]{\includegraphics[scale=1.00]{pano-full.png}}
 \caption{An example application of scikit-image: image registration and warping.
 A: Original photographs by François Malan, taken in Petra, Jordan. License:
